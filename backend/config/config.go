@@ -14,7 +14,7 @@ var RedisClient *redis.Client
 
 func LoadEnv() {
 	os.Setenv("PORT", "8080")
-	os.Setenv("DATABASE_URL", "postgres://myuser:mysecretpassword@localhost:5432/geodata")
+	os.Setenv("DATABASE_URL", "postgresql://geodrawdb_owner:LTv4gunpcx1B@ep-dry-cherry-a128tdxu.ap-southeast-1.aws.neon.tech/geodrawdb?sslmode=require")
 	os.Setenv("REDIS_URL", "localhost:6379")
 }
 

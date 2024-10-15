@@ -38,6 +38,7 @@ func main() {
 	// Auth Routes
 	r.HandleFunc("/api/register", authController.Register).Methods("POST")
 	r.HandleFunc("/api/login", authController.Login).Methods("POST")
+	r.HandleFunc("/api/update", authController.UpdateUser).Methods("PUT")
 
 	// Protected Routes
 	api := r.PathPrefix("/api").Subrouter()
