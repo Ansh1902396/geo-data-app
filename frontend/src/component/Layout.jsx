@@ -1,22 +1,24 @@
 // components/Layout.jsx
 import React from "react";
 import { Outlet, Link, useNavigate } from "react-router-dom";
-import Header from "../component/Header";
-import Footer from "../component/Footer";
+import Header from "./Header";
+import Footer from "./Footer";
 const Layout = () => {
-  const navigate = useNavigate();
-  const handleLogout = () => {
-    // Remove auth token from localStorage and redirect to login page
-    localStorage.removeItem("authToken");
-    navigate("/login");
-  };
+  // const navigate = useNavigate();
+  // const handleLogout = () => {
+  //   // Remove auth token from localStorage and redirect to login page
+  //   localStorage.removeItem("authToken");
+  //   navigate("/login");
+  // };
 
   return (
-    <main style={mainStyles}>
+    <div>
       <Header />
-      <Outlet />
+      <main style={mainStyles}>
+        <Outlet />
+      </main>
       <Footer />
-    </main>
+    </div>
   );
 };
 

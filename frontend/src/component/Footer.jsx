@@ -2,7 +2,7 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <footer style={footerStyles}>
+    <footer>
       <p>© 2024 Aviral Shukla, All Rights Reserved.</p>
     </footer>
   );
